@@ -1,11 +1,11 @@
-while True:
-        from zipfile import ZipFile #to manage the zip file
-        import datetime #for date modified
-        import sys #to read output
-        import os #to view the file
+while True: # So the program doesn't exit after every execution
+        from zipfile import ZipFile # to manage the zip file
+        import datetime # for date modified
+        import sys # to read output
+        import os # to view the file
 
         def zipRead(file):
-                # opening the zip file in READ mode to gather data
+                # opening the zip file in read mode to gather the data
                 original = sys.stdout
                 sys.stdout = open('zipProperties.txt', 'w')
                 with ZipFile(file, 'r') as zip: 
@@ -16,18 +16,18 @@ while True:
                                 #print('\tUncompressed:\t' + str(info.file_size) + ' bytes') 
                 sys.stdout = original
 
-        def main():
+        def main(): # Main class
                 choice = input("Would you like to generate new file(1) or view previous(2)?\n")
                 if choice == '1':
                         # specifying the zip file name, getting input from user
                         file_name = input("Enter the Path to the parent directory: \n")
                         zipRead(file_name)
                 if choice == '2':
-                        os.system('zipProperties.txt')
+                        os.system('zipProperties.txt') # Opens the text file in a seperate window
 
-        main()
+        main() # Intialize
 
-        while True:
+        while True: # Keep the program running unless specified
                 answer = input('Would you like to run again? (y/n): \n')
                 if answer in ('y', 'n'):
                         break
