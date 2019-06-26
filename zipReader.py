@@ -17,7 +17,7 @@ while True:
                 sys.stdout = original
 
         def main():
-                choice = input("Would you like to generate new file(1) or view previous(2)? (1 or 2)\n")
+                choice = input("Would you like to generate new file(1) or view previous(2)?\n")
                 if choice == '1':
                         # specifying the zip file name, getting input from user
                         file_name = input("Enter the Path to the parent directory: \n")
