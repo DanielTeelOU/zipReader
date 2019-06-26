@@ -35,5 +35,5 @@ while True:
         if answer == 'y':
                 continue
         else:
-                print('Exiting.')
+                print('Exiting...')
                 break
