@@ -10,7 +10,7 @@ while True: # So the program doesn't exit after every execution
                 sys.stdout = open('zipProperties.txt', 'w')
                 with ZipFile(file, 'r') as zip: 
                         for info in zip.infolist(): 
-                                print(info.filename + "\t" + str(datetime.datetime(*info.date_time)) + "\t" + str(float(info.compress_size) / 1024) + ' kb')
+                                print(info.filename + "\t" + str(datetime.datetime(*info.date_time)) + "\t" + str(float(info.compress_size) / 1024) + " kb")
                                 #print('\tModified:\t' + str(datetime.datetime(*info.date_time))) 
                                 #print('\tCompressed:\t' + str(info.compress_size) + ' bytes') 
                                 #print('\tUncompressed:\t' + str(info.file_size) + ' bytes') 
